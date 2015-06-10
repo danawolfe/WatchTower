@@ -14,6 +14,8 @@
 		37755ACB1B265C4F001C55B3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37755ACA1B265C4F001C55B3 /* Images.xcassets */; };
 		37755ACE1B265C4F001C55B3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37755ACC1B265C4F001C55B3 /* LaunchScreen.xib */; };
 		37755ADA1B265C4F001C55B3 /* WatchTowerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37755AD91B265C4F001C55B3 /* WatchTowerTests.swift */; };
+		37755AE41B279EDD001C55B3 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 37755AE31B279EDD001C55B3 /* Settings.bundle */; };
+		37755AE61B27A4EB001C55B3 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37755AE51B27A4EB001C55B3 /* Feed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		37755AD31B265C4F001C55B3 /* WatchTowerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchTowerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37755AD81B265C4F001C55B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37755AD91B265C4F001C55B3 /* WatchTowerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchTowerTests.swift; sourceTree = "<group>"; };
+		37755AE31B279EDD001C55B3 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		37755AE51B27A4EB001C55B3 /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 				37755ACA1B265C4F001C55B3 /* Images.xcassets */,
 				37755ACC1B265C4F001C55B3 /* LaunchScreen.xib */,
 				37755ABF1B265C4F001C55B3 /* Supporting Files */,
+				37755AE31B279EDD001C55B3 /* Settings.bundle */,
+				37755AE51B27A4EB001C55B3 /* Feed.swift */,
 			);
 			path = WatchTower;
 			sourceTree = "<group>";
@@ -195,6 +201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37755AE41B279EDD001C55B3 /* Settings.bundle in Resources */,
 				37755AC91B265C4F001C55B3 /* Main.storyboard in Resources */,
 				37755ACE1B265C4F001C55B3 /* LaunchScreen.xib in Resources */,
 				37755ACB1B265C4F001C55B3 /* Images.xcassets in Resources */,
@@ -216,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37755AC61B265C4F001C55B3 /* DetailViewController.swift in Sources */,
+				37755AE61B27A4EB001C55B3 /* Feed.swift in Sources */,
 				37755AC41B265C4F001C55B3 /* MasterViewController.swift in Sources */,
 				37755AC21B265C4F001C55B3 /* AppDelegate.swift in Sources */,
 			);
@@ -415,6 +423,7 @@
 				37755ADF1B265C4F001C55B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		37755AE01B265C4F001C55B3 /* Build configuration list for PBXNativeTarget "WatchTowerTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +432,7 @@
 				37755AE21B265C4F001C55B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
