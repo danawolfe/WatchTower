@@ -83,15 +83,11 @@
 		37755ABE1B265C4F001C55B3 /* WatchTower */ = {
 			isa = PBXGroup;
 			children = (
-				37755AC11B265C4F001C55B3 /* AppDelegate.swift */,
 				37755AC31B265C4F001C55B3 /* MasterViewController.swift */,
 				37755AC51B265C4F001C55B3 /* DetailViewController.swift */,
 				37755AC71B265C4F001C55B3 /* Main.storyboard */,
-				37755ACA1B265C4F001C55B3 /* Images.xcassets */,
-				37755ACC1B265C4F001C55B3 /* LaunchScreen.xib */,
 				37755ABF1B265C4F001C55B3 /* Supporting Files */,
 				37755AE31B279EDD001C55B3 /* Settings.bundle */,
-				37755AE51B27A4EB001C55B3 /* Feed.swift */,
 			);
 			path = WatchTower;
 			sourceTree = "<group>";
@@ -99,6 +95,10 @@
 		37755ABF1B265C4F001C55B3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				37755AE51B27A4EB001C55B3 /* Feed.swift */,
+				37755AC11B265C4F001C55B3 /* AppDelegate.swift */,
+				37755ACC1B265C4F001C55B3 /* LaunchScreen.xib */,
+				37755ACA1B265C4F001C55B3 /* Images.xcassets */,
 				37755AC01B265C4F001C55B3 /* Info.plist */,
 			);
 			name = "Supporting Files";
