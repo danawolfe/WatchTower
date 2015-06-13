@@ -8,14 +8,42 @@
 
 import Foundation
 
-class Feed {
+class Feed: NSObject {
     
-    var siteNames: [String]?
-    var siteAddresses: [String]?
-    
-    init(){
-        siteNames = ["CRM","Yahoo", "Google", "Apple", "eBookFrenzy"]
-        siteAddresses = ["http://idesdc2.danawolfe.com:8000/sap/bc/bsp/sap/crm_ui_start", "http://www.yahoo.com", "http://www.google.com", "http://www.apple.com", "http://www.ebookfrenzy.com"]
+    var urlString: String?
+    var userPasswordString: String?
+    var userUseridString: String?
+    var feedProperties = Dictionary<String, String>()
+    var arrFeedItems = [Dictionary<String, String>]()
+    let observer =
+
+    // Read Settings to set local values
+    func setValuesFromSettings(){
+        urlString = NSUserDefaults.standardUserDefaults().stringForKey("url")
+        userPasswordString = NSUserDefaults.standardUserDefaults().stringForKey("password")
+        userUseridString = NSUserDefaults.standardUserDefaults().stringForKey("userid")
+        
     }
+    
+    // Listen for Settings changes and update local values
+    
+    override init(){
+        // Call super's init
+        super.init()
+        
+        self.setValuesFromSettings()
+        // Listen for Settings changes and update local values
+        observer = NSNotificationCenter.defaultCenter().addObserverForName(NSUserDefaultsDidChangeNotification,
+            object: nil, queue: nil) { _ in
+               self.setValuesFromSettings()
+            
+        }
+    }
+        
+        deinit {
+            NSNotificationCenter.defaultCenter().removeObserver(observer)
+        }
+    
+    
     
 }

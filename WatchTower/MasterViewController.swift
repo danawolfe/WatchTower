@@ -8,12 +8,14 @@
 
 import UIKit
 
-class MasterViewController: UITableViewController {
+let crmFeed = Feed()
 
-    var myFeed = Feed()
-    
+class MasterViewController: UITableViewController, XMLParserDelegate {
+
+   
     var detailViewController: DetailViewController? = nil
     var objects = NSMutableArray()
+    var xmlParser : XMLParser!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,19 +29,17 @@ class MasterViewController: UITableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-//        self.navigationItem.leftBarButtonItem = self.editButtonItem()
-//
-//        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
-//        self.navigationItem.rightBarButtonItem = addButton
-//        if let split = self.splitViewController {
-//            let controllers = split.viewControllers
-//            self.detailViewController = controllers[controllers.count-1].topViewController as? DetailViewController
-//        }
-
         if let split = splitViewController {
             let controllers = split.viewControllers
             detailViewController = controllers[controllers.count-1].topViewController as? DetailViewController
         }
+        
+        let url = NSURL(string: crmFeed.urlString!)
+        xmlParser = XMLParser()
+        xmlParser.delegate = self
+        xmlParser.startParsingWithContentsOfURL(url!)
+        
+
         
     }
 
@@ -47,12 +47,6 @@ class MasterViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-//    func insertNewObject(sender: AnyObject) {
-//        objects.insert(NSDate(), atIndex: 0)
-//        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
-//        self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-//    }
 
     // MARK: - Segues
 
@@ -91,6 +85,10 @@ class MasterViewController: UITableViewController {
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
+    }
+    
+    func parsingWasFinished() {
+        self.tableView.reloadData()
     }
 
 //    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
