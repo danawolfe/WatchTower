@@ -17,8 +17,8 @@ class XMLParser: NSObject, NSXMLParserDelegate {
     var currentDataDictionary = Dictionary<String, String>()
     var currentElement = ""
     var foundCharacters = ""
+    var inEntry = false
     var delegate : XMLParserDelegate?
-//    var crmFeed = Feed()
     
     func startParsingWithContentsOfURL(rssURL: NSURL) {
 
@@ -62,18 +62,14 @@ class XMLParser: NSObject, NSXMLParserDelegate {
         
         if currentElement == "entry" {
             currentDataDictionary.removeAll()
+            inEntry = true
         }
     }
     
     
     func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         if !foundCharacters.isEmpty {
-            
-            //  In the CRM feed the link is an attribute of the opening element; see didStartElement
-            //            if elementName == "link"{
-            //                foundCharacters = (foundCharacters as NSString).substringFromIndex(3)
-            //            }
-            
+       
             currentDataDictionary[currentElement] = foundCharacters
             
             foundCharacters = ""
@@ -81,7 +77,8 @@ class XMLParser: NSObject, NSXMLParserDelegate {
         }
         
         if elementName == "entry" {
-            arrParsedData.append(currentDataDictionary)
+            crmFeed.arrFeedItems.append(currentDataDictionary)
+            //arrParsedData.append(currentDataDictionary)
         }
         
     }

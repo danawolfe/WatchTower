@@ -15,7 +15,7 @@ class Feed: NSObject {
     var userUseridString: String?
     var feedProperties = Dictionary<String, String>()
     var arrFeedItems = [Dictionary<String, String>]()
-    let observer =
+    var observer: NSObjectProtocol?
 
     // Read Settings to set local values
     func setValuesFromSettings(){
@@ -41,7 +41,7 @@ class Feed: NSObject {
     }
         
         deinit {
-            NSNotificationCenter.defaultCenter().removeObserver(observer)
+            NSNotificationCenter.defaultCenter().removeObserver(observer!)
         }
     
     
