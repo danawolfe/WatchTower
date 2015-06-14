@@ -78,7 +78,7 @@ class XMLParser: NSObject, NSXMLParserDelegate {
         
         if elementName == "entry" {
             crmFeed.arrFeedItems.append(currentDataDictionary)
-            //arrParsedData.append(currentDataDictionary)
+            // arrParsedData.append(currentDataDictionary)
         }
         
     }
