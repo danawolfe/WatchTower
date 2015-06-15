@@ -8,6 +8,19 @@
 
 import Foundation
 
+class Element: NSObject {
+    var name: String?
+    var value: String?
+    var attributes = Dictionary<String,String>()
+    var arrElements = [Element]()
+    
+    override init() {
+        super.init()
+        
+    }
+    
+}
+
 class Feed: NSObject {
     
     var urlString: String?
