@@ -14,7 +14,7 @@ import UIKit
 
 class XMLParser: NSObject, NSXMLParserDelegate {
     var arrParsedData = [Dictionary<String, String>]()
-    var currentDataDictionary = Dictionary<String, String>()
+//    var currentDataDictionary = Dictionary<String, String>()
     var currentElement = ""
     var foundCharacters = ""
     var inEntry = false
@@ -22,6 +22,8 @@ class XMLParser: NSObject, NSXMLParserDelegate {
     
     func startParsingWithContentsOfURL(rssURL: NSURL) {
 
+        var curElement: Element
+        
         var config = NSURLSessionConfiguration.defaultSessionConfiguration()
         var userPasswordString = crmFeed.userUseridString! + ":" + crmFeed.userPasswordString!
         let userPasswordData = userPasswordString.dataUsingEncoding(NSUTF8StringEncoding)
@@ -53,6 +55,8 @@ class XMLParser: NSObject, NSXMLParserDelegate {
     func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [NSObject : AnyObject]) {
         // capture the name of the element
         currentElement = elementName
+        
+        
         
         if elementName == "link"{
             foundCharacters = attributeDict["href"]! as! String

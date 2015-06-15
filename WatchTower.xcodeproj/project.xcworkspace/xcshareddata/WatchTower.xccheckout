@@ -10,8 +10,6 @@
 	<string>WatchTower</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>198F6A7DF0CA1C1BA1ECF528C1084DC18EBAA88F</key>
-		<string>https://github.com/danawolfe/WatchTower.git</string>
 		<key>FB407D54EEEB870C937F3A6AB25603756A9D1073</key>
 		<string>https://github.com/danawolfe/WatchTower.git</string>
 	</dict>
@@ -19,8 +17,6 @@
 	<string>WatchTower.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>198F6A7DF0CA1C1BA1ECF528C1084DC18EBAA88F</key>
-		<string>../..</string>
 		<key>FB407D54EEEB870C937F3A6AB25603756A9D1073</key>
 		<string>../..WatchTower</string>
 	</dict>
@@ -32,14 +28,6 @@
 	<string>198F6A7DF0CA1C1BA1ECF528C1084DC18EBAA88F</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>198F6A7DF0CA1C1BA1ECF528C1084DC18EBAA88F</string>
-			<key>IDESourceControlWCCName</key>
-			<string>WatchTower</string>
-		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

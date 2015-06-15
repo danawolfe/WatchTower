@@ -19,6 +19,16 @@ class Element: NSObject {
         
     }
     
+    init( name: String? ) {
+        super.init()
+        
+        self.name = name
+    }
+    
+    func push( newElement: String){
+        self.arrElements.append(Element(name: newElement))
+    }
+    
 }
 
 class Feed: NSObject {
@@ -29,7 +39,8 @@ class Feed: NSObject {
     var feedProperties = Dictionary<String, String>()
     var arrFeedItems = [Dictionary<String, String>]()
     var observer: NSObjectProtocol?
-
+    var rootElement: Element
+    
     // Read Settings to set local values
     func setValuesFromSettings(){
         urlString = NSUserDefaults.standardUserDefaults().stringForKey("url")
@@ -41,6 +52,8 @@ class Feed: NSObject {
     // Listen for Settings changes and update local values
     
     override init(){
+
+        rootElement = Element(name: "root")
         // Call super's init
         super.init()
         
@@ -51,6 +64,9 @@ class Feed: NSObject {
                self.setValuesFromSettings()
             
         }
+        
+
+        
     }
         
         deinit {
