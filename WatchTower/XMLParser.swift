@@ -14,10 +14,9 @@ import UIKit
 
 class XMLParser: NSObject, NSXMLParserDelegate {
     var arrParsedData = [Dictionary<String, String>]()
-//    var currentDataDictionary = Dictionary<String, String>()
+    var currentDataDictionary = Dictionary<String, String>()
     var currentElement = ""
     var foundCharacters = ""
-    var inEntry = false
     var delegate : XMLParserDelegate?
     
     func startParsingWithContentsOfURL(rssURL: NSURL) {
@@ -66,7 +65,7 @@ class XMLParser: NSObject, NSXMLParserDelegate {
         
         if currentElement == "entry" {
             currentDataDictionary.removeAll()
-            inEntry = true
+
         }
     }
     
@@ -81,8 +80,7 @@ class XMLParser: NSObject, NSXMLParserDelegate {
         }
         
         if elementName == "entry" {
-            crmFeed.arrFeedItems.append(currentDataDictionary)
-            // arrParsedData.append(currentDataDictionary)
+            arrParsedData.append(currentDataDictionary)
         }
         
     }

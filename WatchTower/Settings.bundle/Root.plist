@@ -15,8 +15,6 @@
 			<string>None</string>
 			<key>AutocorrectionType</key>
 			<string>No</string>
-			<key>DefaultValue</key>
-			<string>DWOLFE</string>
 			<key>IsSecure</key>
 			<false/>
 			<key>Key</key>
@@ -33,8 +31,6 @@
 			<string>PSTextFieldSpecifier</string>
 			<key>IsSecure</key>
 			<true/>
-			<key>DefaultValue</key>
-			<string>allsop</string>
 			<key>Title</key>
 			<string>Password</string>
 			<key>Key</key>

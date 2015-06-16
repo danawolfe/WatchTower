@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WatchTower/MasterViewController.swift"
-            timestampString = "455586226.771577"
+            timestampString = "456189052.391801"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "MasterViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -22,7 +22,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WatchTower/Feed.swift"
@@ -33,6 +33,68 @@
             endingLineNumber = "14"
             landmarkName = "Element"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WatchTower.Element.attributes.setter : Swift.Dictionary&lt;Swift.String, Swift.String&gt;"
+                  moduleName = "WatchTower"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dana/Documents/ios_development/WatchTower/WatchTower/Feed.swift"
+                  timestampString = "456189158.026711"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WatchTower.Element.init (WatchTower.Element.Type)() -&gt; WatchTower.Element"
+                  moduleName = "WatchTower"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dana/Documents/ios_development/WatchTower/WatchTower/Feed.swift"
+                  timestampString = "456189158.026855"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "173">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WatchTower.Element.init (WatchTower.Element.Type)(name : Swift.Optional&lt;Swift.String&gt;) -&gt; WatchTower.Element"
+                  moduleName = "WatchTower"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dana/Documents/ios_development/WatchTower/WatchTower/Feed.swift"
+                  timestampString = "456189158.026992"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "215">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WatchTower.Element.attributes.materializeForSet : Swift.Dictionary&lt;Swift.String, Swift.String&gt;"
+                  moduleName = "WatchTower"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dana/Documents/ios_development/WatchTower/WatchTower/Feed.swift"
+                  timestampString = "456189158.027133"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -48,6 +110,22 @@
             startingLineNumber = "18"
             endingLineNumber = "18"
             landmarkName = "init()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WatchTower/Feed.swift"
+            timestampString = "456189244.742401"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "setValuesFromSettings()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

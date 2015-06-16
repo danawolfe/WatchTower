@@ -53,7 +53,10 @@ class MasterViewController: UITableViewController, XMLParserDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow() {
-                let urlString = myFeed.siteAddresses?[indexPath.row]
+                let dictionary = xmlParser.arrParsedData[indexPath.row] as Dictionary<String, String>
+                let urlString = dictionary["link"]
+                
+                //let urlString = myFeed.siteAddresses?[indexPath.row]
                 
                 let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
                 
@@ -71,14 +74,14 @@ class MasterViewController: UITableViewController, XMLParserDelegate {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return myFeed.siteNames!.count
+        return xmlParser.arrParsedData.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
-
-        cell.textLabel!.text = myFeed.siteNames![indexPath.row]
+        let currentDictionary = xmlParser.arrParsedData[indexPath.row] as Dictionary<String, String>
+        cell.textLabel!.text = currentDictionary["title"]
         return cell
     }
 
@@ -86,10 +89,28 @@ class MasterViewController: UITableViewController, XMLParserDelegate {
         // Return false if you do not want the specified item to be editable.
         return true
     }
+ 
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 80
+    }
+
     
     func parsingWasFinished() {
         self.tableView.reloadData()
     }
+    
+//    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        let dictionary = xmlParser.arrParsedData[indexPath.row] as Dictionary<String, String>
+//        let updateLink = dictionary["link"]
+//        
+//        let boViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("idBOViewController") as! BOViewController
+//        
+//        boViewController.tutorialURL = NSURL(string: BOLink!)
+//        
+//        showDetailViewController(boViewController, sender: self)
+
+    
 
 //    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
 //        if editingStyle == .Delete {
